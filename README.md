@@ -47,7 +47,7 @@ The image below is a picture that shows the pinout for the ESP32-S3 module.
 
 ### Screen connection (3.5 inch LCD TFT touch display with ili9488):
 
-The screen needs 14 connections between the ESP32 and the screen to work.  Some of these will be for the touch screen, so not actually used in this project (yet), but it's easier to connect them now than to add them later, once it's all in the box.
+The screen needs 14 connections between the ESP32 and the screen to work. 
 
 Going from Left to right from the back of the screen connect like below:
 
@@ -100,3 +100,29 @@ Connect the 5V pin to the pin of the regulator boxed in green.
 Once wired up, you should be able to build and upload this project without any problems.
 
 I'm sure I've missed stuff, or done something wrong, but this will do for now.
+
+##############################################
+
+An updated version is now here.  It's mostly done in C++ (Or Gemini tells me), but runs the sensor at over 10 fps (indicated 11.7 fps).
+
+On this new version, the touch screen now does things.
+
+There is a slider on the left to select the colour for the NeoPixel panel and another on the right to change the brightness.
+
+In the middle are three buttons. One stops the temp scale from auto updating, one pauses the display and the third hides the sliders.
+
+Other upgrades:
+
+There is now a splashscreen on boot up.  Currently this shows the Sundance Logo, but it can easily be changed.
+https://www.teachmemicro.com/lcd-bitmap-converter-online/
+That website lets you get what you need.  You need to remember it's a 240x240 pixel logo.
+
+There is also now a hotspot finder, so every second it draws a cross on the image and displays the hot spot temperature.
+
+Display:
+
+![Image of the built camera showing the display.](./Therm_front.png)
+
+Rear:
+
+![Image of the built camera showing the rear.](./Therm_rear.png)
